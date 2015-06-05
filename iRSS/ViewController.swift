@@ -19,6 +19,8 @@ class ViewController: UIViewController, MWFeedParserDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
+    let refreshControl = UIRefreshControl()
+    
     var items = [MWFeedItem]()
     
     override func viewWillAppear(animated: Bool) {
@@ -31,6 +33,18 @@ class ViewController: UIViewController, MWFeedParserDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // refresh controller
+        refreshControl.addTarget(self, action: "refreshData", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Update")
+        tableView.addSubview(refreshControl)
+        refreshData()
+    }
+
+//#pragma mark Refresh table view
+    func refreshData() {
+        request()
+        refreshControl.endRefreshing()
     }
 
 //#pragma mark Parser
