@@ -79,8 +79,9 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tech News Headlines - Yahoo News" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I02-Fr-esR">
                                 <rect key="frame" x="16" y="28" width="343" height="21"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0016158955270000001" green="0.415963955" blue="0.0048308560929999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -98,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="201.5" y="287.5"/>
         </scene>
-        <!--Title-->
+        <!--WebViewController-->
         <scene sceneID="a8H-qu-FWr">
             <objects>
-                <viewController id="q0G-ix-ao7" customClass="WebViewController" customModule="iRSS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="WebViewController" id="q0G-ix-ao7" customClass="WebViewController" customModule="iRSS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="okP-hp-uIb"/>
                         <viewControllerLayoutGuide type="bottom" id="8DV-Y3-efO"/>
@@ -110,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TlI-yw-7nj">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TlI-yw-7nj">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="stop" id="f02-1H-tof">
@@ -120,12 +121,21 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGH-mu-4s3">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGH-mu-4s3">
                                 <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TlI-yw-7nj" firstAttribute="top" secondItem="rGH-mu-4s3" secondAttribute="bottom" id="0tD-vR-qZr"/>
+                            <constraint firstItem="rGH-mu-4s3" firstAttribute="leading" secondItem="TlI-yw-7nj" secondAttribute="leading" id="MXJ-cR-sdd"/>
+                            <constraint firstItem="TlI-yw-7nj" firstAttribute="leading" secondItem="Uk3-iu-Z9o" secondAttribute="leading" id="OHB-5N-Yob"/>
+                            <constraint firstItem="TlI-yw-7nj" firstAttribute="bottom" secondItem="8DV-Y3-efO" secondAttribute="top" id="WjH-5H-u3f"/>
+                            <constraint firstAttribute="trailing" secondItem="TlI-yw-7nj" secondAttribute="trailing" id="XF2-Su-pGp"/>
+                            <constraint firstItem="TlI-yw-7nj" firstAttribute="trailing" secondItem="rGH-mu-4s3" secondAttribute="trailing" id="eeC-mA-nyO"/>
+                            <constraint firstItem="rGH-mu-4s3" firstAttribute="top" secondItem="okP-hp-uIb" secondAttribute="bottom" id="toe-ff-7Qk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="aEv-re-BuV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
