@@ -22,7 +22,7 @@ extension ViewController: UITableViewDataSource {
         let preview = cell.contentView.viewWithTag(102) as! UITextView
         let title = cell.contentView.viewWithTag(100) as! UILabel
         
-        title.text = item.title
+        title.text = "  \(item.title)"
         
         if item.summary != nil {
             var summaryComponent = item.summary.componentsSeparatedByString("<img src=\"")
