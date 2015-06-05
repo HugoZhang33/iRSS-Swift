@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="iRSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lho-zd-3mN">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <state key="normal" title="FEEDS">
+                                    <color key="titleColor" red="0.0016158955265926848" green="0.415963955026455" blue="0.0048308560930628904" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tech News Headlines - Yahoo News" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I02-Fr-esR">
+                                <rect key="frame" x="16" y="58" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SN-Rf-bI6">
+                                <rect key="frame" x="72" y="20" width="95" height="30"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="14"/>
+                                <state key="normal" title="CATEGORIES">
+                                    <color key="titleColor" red="0.0016158955265926848" green="0.415963955026455" blue="0.0048308560930628904" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-LD-5Z5">
+                                <rect key="frame" x="-3" y="87" width="380" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="120" id="gtE-OB-9lr">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gtE-OB-9lr" id="yBs-Wt-0pb">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Watch to hit retail stores on June 26" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="196-c9-jLv">
+                                                    <rect key="frame" x="16" y="8" width="325" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="6fJ-45-DCH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ban" translatesAutoresizingMaskIntoConstraints="NO" id="8WJ-Sc-lsn">
+                                                    <rect key="frame" x="16" y="37" width="97" height="67"/>
+                                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="67" id="f0u-D3-oM2"/>
+                                                        <constraint firstAttribute="width" constant="97" id="fPL-MC-ZtF"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="102" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUJ-Sb-ibN">
+                                                    <rect key="frame" x="118" y="37" width="262" height="75"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="262" id="2rV-Af-202"/>
+                                                        <constraint firstAttribute="height" constant="75" id="elU-8n-Jrb"/>
+                                                    </constraints>
+                                                    <string key="text">Reuters) - Apple Inc said it would start selling some models of its watch at its retail stores this month, and also roll out the gadget i </string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="196-c9-jLv" firstAttribute="leading" secondItem="8WJ-Sc-lsn" secondAttribute="leading" id="MXC-NL-XfD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="196-c9-jLv" secondAttribute="trailing" constant="31" id="Re0-Hc-HPU"/>
+                                                <constraint firstItem="TUJ-Sb-ibN" firstAttribute="top" secondItem="196-c9-jLv" secondAttribute="bottom" constant="8" symbolic="YES" id="SZt-Uc-iPc"/>
+                                                <constraint firstItem="196-c9-jLv" firstAttribute="top" secondItem="yBs-Wt-0pb" secondAttribute="topMargin" id="VdI-zj-TUp"/>
+                                                <constraint firstItem="8WJ-Sc-lsn" firstAttribute="top" secondItem="196-c9-jLv" secondAttribute="bottom" constant="8" symbolic="YES" id="eTL-ur-ZLA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TUJ-Sb-ibN" secondAttribute="bottom" constant="-0.5" id="fXl-RB-kf6"/>
+                                                <constraint firstAttribute="trailing" secondItem="TUJ-Sb-ibN" secondAttribute="trailing" id="i6z-E3-SSR"/>
+                                                <constraint firstItem="TUJ-Sb-ibN" firstAttribute="leading" secondItem="8WJ-Sc-lsn" secondAttribute="trailing" constant="5" id="j8b-c1-Z6K"/>
+                                                <constraint firstItem="196-c9-jLv" firstAttribute="leading" secondItem="yBs-Wt-0pb" secondAttribute="leadingMargin" constant="8" id="vsA-3U-ccR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="q0G-ix-ao7" kind="modal" identifier="showWeb" id="idv-5E-tb6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="categoryButton" destination="6SN-Rf-bI6" id="41m-T7-HXl"/>
+                        <outlet property="feedsButton" destination="lho-zd-3mN" id="w1f-pf-3bd"/>
+                        <outlet property="sourceTitle" destination="I02-Fr-esR" id="cb8-9S-qJ4"/>
+                        <outlet property="tableView" destination="cpC-LD-5Z5" id="UNj-tR-Ls0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.5" y="287.5"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="a8H-qu-FWr">
+            <objects>
+                <viewController id="q0G-ix-ao7" customClass="WebViewController" customModule="iRSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="okP-hp-uIb"/>
+                        <viewControllerLayoutGuide type="bottom" id="8DV-Y3-efO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uk3-iu-Z9o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGH-mu-4s3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TlI-yw-7nj">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="stop" id="f02-1H-tof">
+                                        <connections>
+                                            <segue destination="tRy-a7-ekJ" kind="unwind" unwindAction="close:" id="nBk-nk-dAz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="aEv-re-BuV"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="rGH-mu-4s3" id="jbf-TI-tRC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Sh-lq-hGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tRy-a7-ekJ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="793.5" y="287.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ban" width="49" height="34"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
